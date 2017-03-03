@@ -4,11 +4,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import './index.css';
 import { Router, Route, hashHistory } from 'react-router'
-import Project from './modules/Project'
-import Install from './modules/Install'
-import Report from './modules/Report'
-import Analytics from './modules/Analytics'
-import Config from './modules/Config'
+import Project from './modules/routes/Project'
+import Install from './modules/routes/Install'
+import Report from './modules/routes/Report'
+import Analytics from './modules/routes/Analytics'
+import Config from './modules/routes/Config'
 
 ReactDOM.render((
   <Router history={hashHistory}>

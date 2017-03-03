@@ -11,7 +11,7 @@ import {
   Row,
   Col
 } from 'reactstrap';
-import Img from './components/Img'
+import Img from '../components/Img'
 
 export default React.createClass({
   render() {
