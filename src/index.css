@@ -2,4 +2,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: #6B7985;
+}
+
+body,html {
+  height: 100%;
+}
+
+.contentarea {
+  height: 100%;
+  min-height: 100%;
 }

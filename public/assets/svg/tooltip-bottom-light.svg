@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="156px" height="96px" viewBox="0 0 156 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>9F2139B2-EC32-4696-97C7-D625EE89E710</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M124.735872,85.2641277 L145.075641,85.2641277 C150.597561,85.2641277 155.071306,80.7869181 155.071306,75.2640001 L155.071306,10.0001276 C155.071306,4.47904999 150.596094,-7.10542736e-15 145.075641,-7.10542736e-15 L9.99566544,-7.10542736e-15 C4.47374543,-7.10542736e-15 0,4.47720963 0,10.0001276 L0,75.2640001 C0,80.7850777 4.47521186,85.2641277 9.99566544,85.2641277 L103.909257,85.2641277 L114.322565,95.6774355 L124.735872,85.2641277 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="155.071306" height="95.6774355" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Login" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-Projects-Installed" transform="translate(-238.000000, -208.000000)" stroke-width="4" stroke="#FFFFFF">
+            <g id="Rectangle-39-Copy-2" transform="translate(172.000000, 168.000000)">
+                <g id="Tooltip-Bottom-Light" transform="translate(66.000000, 40.000000)">
+                    <g id="Combined-Shape">
+                        <use mask="url(#mask-2)" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="126px" height="52px" viewBox="0 0 126 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>B577E390-6D90-4B55-8B04-3B3876D7F4EC</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M69.9558441,46.136039 L122.003393,46.136039 C124.218824,46.136039 126,44.3444041 126,42.1343105 L126,4.13776741 C126,1.92517543 124.210658,0.136038969 122.003393,0.136038969 L3.99660699,0.136038969 C1.78117561,0.136038969 0,1.92767382 0,4.13776741 L0,42.1343105 C0,44.3469025 1.7893419,46.136039 3.99660699,46.136039 L58.7720779,46.136039 L64.363961,51.7279221 L69.9558441,46.136039 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="126" height="51.5918831" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-opacity="0.292204484">
+        <g id="Tooltip-Bottom-Light" stroke="#12C1C7" stroke-width="2" fill="#FFFFFF">
+            <g id="Combined-Shape">
+                <use mask="url(#mask-2)" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
