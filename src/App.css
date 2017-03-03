@@ -77,3 +77,24 @@
 .green .top-10 {
   margin-top: 10%;
 }
+
+.menu-font-color {
+  color: #C7EFF0;
+}
+
+.on-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.no-padding {
+  padding: 0;
+}
+
+$container-max-widths: (
+  sm: 90px,
+  md: 720px,
+  lg: 960px
+);

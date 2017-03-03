@@ -10,7 +10,7 @@ const ComponentLink = (props) => {
   return (
     <NavItem>
       <NavLink tag={Link} to={props.item.to} activeClassName="active">
-        <Img to={"png/" + image + ".png"} /> {name}
+        <Img to={"svg/" + image + ".svg"} /> {name}
       </NavLink>
     </NavItem>
   );
@@ -104,12 +104,12 @@ class Components extends React.Component {
   render() {
     var expanded = this.state.expanded;
     var textOfExpand = expanded ? '<<<' : '>>>';
-    var greenClass = expanded ? 'flex-column' : 'green flex-column';
+    var greenClass = expanded ? 'flex-column contentarea' : 'green flex-column contentarea';
     return (
-      <div>
-        <Row className="no-gutters">
-          <Col md={this.state.cols.first}>
-            <div className="docs-sidebar text-center">
+      <div className="contentarea">
+        <Row className="no-gutters contentarea">
+          <Col xs={this.state.cols.first} className="menu-font-color">
+            <div className="docs-sidebar text-center contentarea">
               <div className="green">
                 <div>
                   &nbsp;
@@ -130,7 +130,7 @@ class Components extends React.Component {
                 {this.state.navItems.map((item, i) => {
                   return <ComponentLink key={i} item={item} expanded={this.state.expanded} />;
                 })}
-                <NavItem>
+                <NavItem className="on-bottom">
                   <NavLink href="#" onClick={this.onClick}>
                     {textOfExpand}
                   </NavLink>
@@ -138,7 +138,7 @@ class Components extends React.Component {
               </Nav>
             </div>
           </Col>
-          <Col md={this.state.cols.last}>
+          <Col xs={this.state.cols.last}>
             {this.props.children}
           </Col>
         </Row>
