@@ -129,15 +129,15 @@ class Components extends React.Component {
                 </div>
                 <Row>
                   <Col>
-                    <Gravatar email="xptavares@gmail.com" size={75} rating="g" default="mm" />
+                    <Gravatar email={this.props.currentUser.email} size={75} rating="g" default="mm" />
                   </Col>
                 </Row>
                 <Row>
                   <Col>
-                    <b className="d-inline-flex p-2">Edward Green</b>
+                    <b className="d-inline-flex p-2">{this.props.currentUser.name}</b>
                   </Col>
                 </Row>
-                {this.state.expanded ? <EmailText/> : null}
+                {this.state.expanded ? <EmailText email={this.props.currentUser.email}/> : null}
               </div>
               <Nav className={greenClass}>
                 {this.state.navItems.map((item, i) => {

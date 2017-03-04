@@ -1,12 +1,10 @@
 import React from 'react'
 import {
   Card,
-  CardHeader,
   CardTitle,
   CardText,
   CardBlock,
   Button,
-  CardFooter,
   Container,
   Row,
   Col

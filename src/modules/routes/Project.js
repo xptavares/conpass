@@ -1,17 +1,8 @@
 import React from 'react'
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
   Container,
   Row,
-  Col,
-  Jumbotron,
-  Button
+  Col
 } from 'reactstrap';
 import Img from '../components/Img'
 import ProjectTypeform from '../components/ProjectTypeform'
