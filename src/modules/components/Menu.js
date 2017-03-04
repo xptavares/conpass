@@ -3,26 +3,25 @@ import { Link } from 'react-router';
 import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap';
 import Gravatar from 'react-circle-gravatar';
 import Img from './Img'
+import EmailText from './EmailText'
 
 const ComponentLink = (props) => {
+  if(props.item.name === 'line-divider') {
+    let className = props.expanded ? 'hr-opened' : 'hr-closed';
+    return (
+      <NavItem>
+        <hr className={className}></hr>
+      </NavItem>
+    );
+  }
   let name = props.expanded ? props.item.name : '';
   let image = props.expanded ? props.item.images.hover : props.item.images.normal;
   return (
     <NavItem>
-      <NavLink tag={Link} to={props.item.to} activeClassName="active">
-        <Img to={"svg/" + image + ".svg"} /> {name}
+      <NavLink tag={Link} to={props.item.to} activeClassName="active" className={props.item.className}>
+        <Img to={"svg/" + image + ".svg"} className="no-padding"/> {name}
       </NavLink>
     </NavItem>
-  );
-};
-
-const EmailText = (props) => {
-  return (
-    <Row>
-      <Col>
-        edward@green.com
-      </Col>
-    </Row>
   );
 };
 
@@ -30,59 +29,64 @@ class Components extends React.Component {
   constructor(props) {
     super(props);
 
-    this.onClick = this.onClick.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
 
     this.state = {
+      path: props.path,
       navItems: [
-        {
-          name: '',
-          to: '',
-          disabled: true,
-          images: {
-            normal: 'line-divider',
-            hover: 'line-divider'
-          }
-        },
         {
           name: 'Meu Painel',
           to: '/',
           images: {
             normal: 'ic-star',
-            hover: 'ic-star-hover'
-          }
+            hover: 'ic-star-hover',
+            active: 'ic-download-active'
+          },
+          className: ''
         },
         {
-          name: '',
-          to: '',
-          disabled: true,
-          images: {
-            normal: 'line-divider',
-            hover: 'line-divider'
-          }
+          name: 'line-divider'
         },
         {
           name: 'Analytics',
           to: '/analytics/',
           images: {
             normal: 'ic-dash',
-            hover: 'ic-dash-hover'
-          }
+            hover: 'ic-dash-hover',
+            active: 'ic-dash-active'
+          },
+          className: ''
         },
         {
           name: 'Extenção',
           to: '/extension/',
           images: {
             normal: 'ic-download',
-            hover: 'ic-download-hover'
-          }
+            hover: 'ic-download-hover',
+            active: 'ic-download-active'
+          },
+          className: ''
         },
         {
           name: 'Configuração',
           to: '/config/',
           images: {
             normal: 'ic-config',
-            hover: 'ic-config-hover'
-          }
+            hover: 'ic-config-hover',
+            active: 'ic-config-active'
+          },
+          className: ''
+        },
+        {
+          name: '',
+          to: '/logout/',
+          images: {
+            normal: 'ic-logout',
+            hover: 'ic-logout',
+            active: 'ic-logout-active'
+          },
+          className: 'on-bottom'
         }
       ],
       expanded: false,
@@ -92,25 +96,34 @@ class Components extends React.Component {
       }
     };
   }
-  onClick(e) {
+  onMouseEnter(e) {
     this.setState({
-      expanded: !this.state.expanded,
+      expanded: true,
       cols: {
-        first: 2 === this.state.cols.first ? 1 : 2,
-        last: 10 === this.state.cols.last ? 11 : 10
+        first: 2,
+        last: 10
+      }
+    })
+  }
+  onMouseLeave(e) {
+    this.setState({
+      expanded: false,
+      cols: {
+        first: 1,
+        last: 11
       }
     })
   }
   render() {
     var expanded = this.state.expanded;
-    var textOfExpand = expanded ? '<<<' : '>>>';
     var greenClass = expanded ? 'flex-column contentarea' : 'green flex-column contentarea';
+    var bottomBorder = expanded ? 'border-bottom-opened green' : 'border-bottom-closed green';
     return (
       <div className="contentarea">
         <Row className="no-gutters contentarea">
-          <Col xs={this.state.cols.first} className="menu-font-color">
+          <Col xs={this.state.cols.first} className="menu-font-color" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
             <div className="docs-sidebar text-center contentarea">
-              <div className="green">
+              <div className={bottomBorder}>
                 <div>
                   &nbsp;
                 </div>
@@ -128,13 +141,8 @@ class Components extends React.Component {
               </div>
               <Nav className={greenClass}>
                 {this.state.navItems.map((item, i) => {
-                  return <ComponentLink key={i} item={item} expanded={this.state.expanded} />;
+                  return <ComponentLink key={i} item={item} path={this.state.path} expanded={this.state.expanded} />;
                 })}
-                <NavItem className="on-bottom">
-                  <NavLink href="#" onClick={this.onClick}>
-                    {textOfExpand}
-                  </NavLink>
-                </NavItem>
               </Nav>
             </div>
           </Col>

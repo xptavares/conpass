@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="contentarea">
-        <Menu>
+        <Menu path={this.props.location.pathname}>
           <Topnavbar />
           {this.props.children}
         </Menu>

@@ -6,7 +6,7 @@ import Img from './Img'
 const ComponentLink = (props) => {
   return (
     <NavItem>
-      <NavLink tag={Link} to={props.item.to} activeClassName="active">
+      <NavLink tag={Link} to={props.item.to} activeClassName="active" className="navbar-top-nav navbar-top-nav-link">
         {props.item.name}
       </NavLink>
     </NavItem>
@@ -26,6 +26,10 @@ class Topnavbar extends React.Component {
           to: '/projects/'
         },
         {
+          name: 'INSTALAÇÃO',
+          to: '/extension/'
+        },
+        {
           name: 'RELATÓRIOS',
           to: '/reports/'
         }
@@ -41,7 +45,7 @@ class Topnavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light toggleable>
+        <Navbar color="faded" light toggleable className="no-padding">
           <NavbarToggler left onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar>
