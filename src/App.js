@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Menu from './modules/components/Menu'
 import Topnavbar from './modules/components/Topnavbar'
+import { Container, Row, Col, Button } from 'reactstrap';
 
 class App extends Component {
 
@@ -19,7 +20,24 @@ class App extends Component {
       <div className="contentarea">
         <Menu path={this.props.location.pathname} currentUser={this.state.currentUser}>
           <Topnavbar />
-          {this.props.children}
+          <Container>
+            <Row>
+              <Col>
+                {this.props.children}
+              </Col>
+              <Col md={1}>
+                &nbsp;
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                &nbsp;
+              </Col>
+              <Col md={1}>
+                <Button outline color="primary">Ajuda?</Button>{' '}
+              </Col>
+            </Row>
+          </Container>
         </Menu>
       </div>
     );
