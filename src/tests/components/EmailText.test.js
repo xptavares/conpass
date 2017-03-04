@@ -16,7 +16,6 @@ it('render an email', () =>{
   renderer.render(<EmailText email={email} />);
   const result = renderer.getRenderOutput();
   expect(result.type).toBe(Row);
-
 })
 
 it('dont change de email passed', function() {

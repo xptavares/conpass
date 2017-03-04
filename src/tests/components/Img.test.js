@@ -9,7 +9,7 @@ it('renders without crashing', () => {
   ReactDOM.render(<Img to={to} />, div);
 });
 
-it('dont change de email passed', function() {
+it('test attrs', function() {
   const image = {
     to: 'svg',
     className: "clazz",
