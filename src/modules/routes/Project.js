@@ -31,22 +31,17 @@ class Project extends React.Component {
   }
   render() {
     return <div>
-      <Container>
         <Row>
           <Col>
-            <h3><spam className="notbold">Meus</spam>Projetos</h3>
+            <h3>Meus Projetos</h3>
           </Col>
           <Col className="text-right">
-            <h3>
-              Criar <spam>Novo</spam>
-              <Img to="svg/bnt-float-create.svg" />
-            </h3>
+            <h3>Criar Novo <Img to="svg/bnt-float-create.svg" /></h3>
           </Col>
         </Row>
         {this.state.projectTypes.map((project, i) => {
           return <ProjectTypeform project={project} key={project.id} />;
         })}
-      </Container>
     </div>
   }
 }

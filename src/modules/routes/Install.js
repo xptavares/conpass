@@ -15,7 +15,7 @@ export default React.createClass({
     return <div>
       <Row>
         <Col>
-          Instalar Conpass
+          <div className="title">Instalar Conpass</div>
         </Col>
       </Row>
       <Row>
