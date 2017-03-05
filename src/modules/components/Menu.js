@@ -1,36 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap';
+import { Row, Col, Nav } from 'reactstrap';
 import Gravatar from 'react-circle-gravatar';
-import Img from './Img'
 import EmailText from './EmailText'
-
-const ComponentLink = (props) => {
-  if(props.item.name === 'line-divider') {
-    let className = props.expanded ? 'hr-opened' : 'hr-closed';
-    return (
-      <NavItem>
-        <hr className={className}></hr>
-      </NavItem>
-    );
-  }
-  let name = props.expanded ? props.item.name : '';
-  let image = props.expanded ? props.item.images.hover : props.item.images.normal;
-  return (
-    <NavItem>
-      <NavLink tag={Link} to={props.item.to} activeClassName="active" className={props.item.className}>
-        <Img to={"svg/" + image + ".svg"} className="no-padding"/> {name}
-      </NavLink>
-    </NavItem>
-  );
-};
+import ComponentLink from './ComponentLink'
 
 class Components extends React.Component {
   constructor(props) {
     super(props);
-
-    this.onMouseEnter = this.onMouseEnter.bind(this);
-    this.onMouseLeave = this.onMouseLeave.bind(this);
 
     this.state = {
       path: props.path,
@@ -41,12 +17,17 @@ class Components extends React.Component {
           images: {
             normal: 'ic-star',
             hover: 'ic-star-hover',
-            active: 'ic-download-active'
+            active: 'ic-star-active'
           },
           className: ''
         },
         {
-          name: 'line-divider'
+          name: 'line-divider',
+          images: {
+            normal: '',
+            hover: '',
+            active: ''
+          }
         },
         {
           name: 'Analytics',
@@ -95,6 +76,9 @@ class Components extends React.Component {
         last: 11
       }
     };
+
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
   }
   onMouseEnter(e) {
     this.setState({
