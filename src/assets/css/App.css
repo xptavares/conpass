@@ -87,22 +87,6 @@ h3 span { font-weight: bold; }
   background-color: #0EC1C5;
 }
 
-.project-disable {
-  background-color: #959595;
-}
-
-.project-green {
-  background-color: #4CE5BF;
-}
-
-.project-red {
-  background-color: red;
-}
-
-.project-align-items-center {
-  display: flex;
-  align-items: center;
-}
 div.inline {
   float:left;
   padding: 2px;
@@ -110,28 +94,6 @@ div.inline {
 .clearBoth { clear:both; }
 .italic {
     font-style: italic;
-}
-
-.project-circle {
-  border-radius: 50%;
-  width: 6px;
-  height: 6px;
-}
-
-.project-padding-right {
-  float:left;
-  width:25%;
-}
-
-.project-last-row {
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  padding: 10px;
-}
-
-.project-row {
-  padding: 10px;
 }
 
 .flex-column li:first-child {

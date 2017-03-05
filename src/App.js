@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import './assets/css/App.css';
+import './assets/css/project.css';
 import Menu from './modules/components/Menu'
 import Topnavbar from './modules/components/Topnavbar'
 import { Container, Row, Col, Button } from 'reactstrap';
