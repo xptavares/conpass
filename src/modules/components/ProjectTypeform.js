@@ -19,7 +19,8 @@ class ProjectTypeform extends React.Component {
           <div className="card round">
             <Row>
               <div className={isInstalled ? 'col-md-4 two-round project-green' : 'col-md-4 two-round project-disable' }>
-                <div className="">
+                <div className="vertical-center">
+                    <Img to="png/combined-shape-branco.png"/>
                 </div>
               </div>
               <div className="col-md-8 px-3">
