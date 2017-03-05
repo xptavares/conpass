@@ -64,7 +64,7 @@ class Components extends React.Component {
           to: '/logout/',
           images: {
             normal: 'ic-logout',
-            hover: 'ic-logout',
+            hover: 'ic-logout-hover',
             active: 'ic-logout-active'
           },
           className: 'on-bottom'
